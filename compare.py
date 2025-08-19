@@ -3,7 +3,7 @@ import numpy as np
 import glob
 
 # Load reference image (float64)
-ref = np.array(Image.open("tree_double.png"),dtype=np.float64)
+ref = np.array(Image.open("sierpinski_double.png"),dtype=np.float64)
 
 # Function to compute metrics
 def compare_images(img_path, ref):
@@ -17,6 +17,6 @@ def compare_images(img_path, ref):
 from skimage.metrics import structural_similarity
 
 # Compare all outputs
-for img_path in glob.glob("tree_*.png"):
+for img_path in glob.glob("sierpinski_*.png"):
     mse, psnr, ssim = compare_images(img_path, ref)
     print(f"{img_path}: MSE={mse:.4f}, PSNR={psnr:.2f} dB, SSIM={ssim:.4f}")
