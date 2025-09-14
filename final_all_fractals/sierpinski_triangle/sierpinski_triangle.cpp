@@ -16,8 +16,8 @@
 
 using namespace std;
 
-const int WIDTH = 800;
-const int HEIGHT = 800;
+const int WIDTH = 3200;
+const int HEIGHT = 3200;
 
 using Pixel = std::array<unsigned char, 3>;
 
@@ -89,7 +89,7 @@ void runSierpinski(const std::string& filename, int depth) {
 }
 
 int main() {
-    int depth = 6;
+    int depth = 8;
 
     // float
     runSierpinski<float>("sierpinski_float.png", depth);
@@ -108,7 +108,6 @@ int main() {
 
     return 0;
 }
-
 
 
 
